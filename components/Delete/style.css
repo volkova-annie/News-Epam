@@ -1,0 +1,35 @@
+.article-delete {
+  margin-top: 10px;
+  position: relative;
+  display: block;
+  border-width: 0;
+  padding: 0;
+  height:15px;
+  width:15px;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background-color: #cc7a6f;
+  color: #ecf0f1;
+  transition: background-color .5s;
+  overflow: hidden;
+}
+
+.article-delete:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  padding-top: 0;
+  border-radius: 100%;
+  background-color: rgba(236, 240, 241, .3);
+  transform: translate(-50%, -50%);
+}
+
+.article-delete:active:before {
+  width: 120%;
+  padding-top: 120%;
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
