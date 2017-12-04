@@ -1,0 +1,16 @@
+.sort {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+}
+select {
+  margin-left: 10px;
+  width: 400px;
+  outline: none;
+}
