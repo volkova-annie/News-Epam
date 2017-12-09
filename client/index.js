@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 import configureStore from './configure-store'
 import initialState from './initial-state'
-import {App, Post} from '../components'
+import {App, Post, Search} from '../components'
 import {
   BrowserRouter as Router,
   Route,
@@ -22,6 +22,9 @@ ReactDOM.render(
           exact
           path="/"
           component={App} />
+        <Route
+          path="/search/:query"
+          component={Search} />
         <Route
           path="/post/:postId"
           component={Post} />
