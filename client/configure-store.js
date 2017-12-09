@@ -5,7 +5,7 @@ import * as reducers from '../reducers'
 
 export default function configreStore (initialState) {
   const appReducer = combineReducers({
-    ...reducers,
+    ...reducers
   })
 
   return createStore(

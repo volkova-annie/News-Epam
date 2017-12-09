@@ -1,3 +1,7 @@
 export default {
-  news: []
+  news: [],
+  search: {
+    requested: false,
+    data: [],
+  },
 }
