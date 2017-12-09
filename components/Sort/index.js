@@ -6,7 +6,7 @@ const Sort = props => {
     <label>Sort by: </label>
     <select defaultValue='' onChange={props.actions.sortNews}>
       <option disabled value=''>---</option>
-      <option value='publishedAt'>Date</option>
+      <option value='published'>Date</option>
       <option value='title'>Title</option>
     </select>
   </div>
