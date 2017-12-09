@@ -19,8 +19,14 @@ class Post extends Component {
 
     if (article) {
       return <div>
-        <Link to='/'>To homepage</Link>
+        <Link to='/'>To home page</Link>
+        
         <h2>{article.title}</h2>
+        <p>{article.abstract}</p>
+        <p>{article.section}</p>
+        <p>{article.published_date}</p>
+        <p>{article.byline}</p>
+        <p>{article.geo_facet[0]}</p>
       </div>
     }
     else {
