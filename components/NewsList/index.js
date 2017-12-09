@@ -15,13 +15,11 @@ const Item = props => {
   const id = slug(props.title).toLowerCase()
   return <li className='post-item'>
     <Link to={`/post/${id}`}  className='post-item__link'>
-    
       <div className='image-wrapper'>
         <img src={findImage(props.multimedia)} />
       </div>
       <span className='title'>{props.title}</span>
       <span className='date'>{getDate(props.published_date)}</span>
-
     </Link>
   </li>
 }
