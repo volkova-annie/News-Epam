@@ -10,7 +10,7 @@ function resolve (dir) {
 module.exports = {
   entry: './client/index.js',
   output: {
-    filename: 'app.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'static')
   },
   module: {
@@ -31,6 +31,13 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        }
+      },
+      {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -45,7 +52,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['static']),
     new ExtractTextPlugin({
-      filename: '[name].css',
+      filename: 'bundle.css',
       disable: false,
       allChunks: true
     }),
