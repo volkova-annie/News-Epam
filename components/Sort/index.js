@@ -8,7 +8,6 @@ const Sort = props => {
       <option disabled value=''>---</option>
       <option value='publishedAt'>Date</option>
       <option value='title'>Title</option>
-      <option value='author'>Author</option>
     </select>
   </div>
 }
