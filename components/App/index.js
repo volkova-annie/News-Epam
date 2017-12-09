@@ -14,6 +14,8 @@ class App extends Component {
 
   render () {
     return <div className='app'>
+      <h1>The Most Popular News from New York Times API</h1>
+      <img src='/assets/no-photo.png' />
       <Sort {...this.props} />
       <NewsList {...this.props} />
     </div>
