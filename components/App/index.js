@@ -5,6 +5,7 @@ import {bindActionCreators} from 'redux'
 import actions from '../../actions'
 import NewsList from '../NewsList'
 import Sort from '../Sort'
+import SearchInput from '../SearchInput'
 import './style.css'
 
 class App extends Component {
@@ -15,8 +16,8 @@ class App extends Component {
   render () {
     return <div className='app'>
       <h1>The Most Popular News from New York Times API</h1>
-      <img src='/assets/no-photo.png' />
       <Sort {...this.props} />
+      <SearchInput {...this.props} />
       <NewsList {...this.props} />
     </div>
   }
