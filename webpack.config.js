@@ -60,5 +60,6 @@ module.exports = {
       fetch: 'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch',
       EventSource: 'imports-loader?this=>global!exports-loader?global.EventSource!event-source-polyfill'
     })
-  ]
+  ],
+  devtool: 'source-map'
 }
