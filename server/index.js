@@ -3,6 +3,7 @@ const express = require('express') //eslint-disable-line no-undef
 const app = express()
 
 app.use('/static', express.static('static'))
+app.use('/assets', express.static('assets'))
 
 app.set('views', path.join(__dirname, 'templates')) //eslint-disable-line no-undef
 app.set('view engine', 'pug')
