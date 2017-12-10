@@ -22,12 +22,17 @@ class Search extends Component {
   }
 
   render () {
-    console.log(this.props);
     return <div className='app'>
-      <Link to='/'>To home page</Link>
-      <h1>{`You are looking for "${this.props.match.params.query}"`}</h1>
-      <SearchSort {...this.props} />
-      <SearchInput {...this.props} />
+      <Link
+        className='link-back'
+        to='/'>
+        To home page
+      </Link>
+      <h1 className='header'>{`You are looking for "${this.props.match.params.query}"`}</h1>
+      <div className='header-inputs'>
+        <SearchSort {...this.props} />
+        <SearchInput {...this.props} />
+      </div>
       {this.props.search.data.length > 0 && <SearchList {...this.props} />}
       {this.props.search.requested && this.props.search.data.length <= 0 && <p>{`Oops... we didn't find "${this.props.match.params.query}"`}</p>}
     </div>

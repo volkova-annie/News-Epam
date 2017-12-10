@@ -1,0 +1,23 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+form {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 300px;
+  /*display: flex;
+  justify-content: center;*/
+}
+
+.search {
+  width: 200px;
+  box-sizing: border-box;
+}

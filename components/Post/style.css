@@ -1,0 +1,14 @@
+.link-back {
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 1rem;
+}
+
+.link-back:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url(../../assets/left-arrow.png);
+}

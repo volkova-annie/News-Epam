@@ -4,7 +4,7 @@ import {Link, withRouter} from 'react-router-dom'
 import {bindActionCreators} from 'redux'
 import slug from 'slug'
 import actions from '../../actions'
-// import './style.css';
+import './style.css';
 
 class Post extends Component {
   componentDidMount () {
@@ -16,10 +16,14 @@ class Post extends Component {
     const article = news.find(item =>
       slug(item.title).toLowerCase() === postId
     )
-    
+
     if (article) {
       return <div>
-        <Link to='/'>To home page</Link>
+        <Link
+          className='link-back'
+          to='/'>
+          To home page
+        </Link>
 
         <h2>{article.title}</h2>
         <p>{article.abstract}</p>

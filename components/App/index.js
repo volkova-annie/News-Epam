@@ -15,9 +15,11 @@ class App extends Component {
 
   render () {
     return <div className='app'>
-      <h1>The Most Popular News from New York Times API</h1>
-      <Sort {...this.props} />
-      <SearchInput {...this.props} />
+      <h1 className='header'>The Most Popular News from New York Times API</h1>
+      <div className='header-inputs'>
+        <SearchInput {...this.props} />
+        <Sort {...this.props} />
+      </div>
       <NewsList {...this.props} />
     </div>
   }
