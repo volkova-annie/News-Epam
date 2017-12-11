@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import slug from 'slug'
-import {getDate} from '../modules/date.js'
+import {getDate} from '../../modules/date.js'
 import './style.css'
 
 
