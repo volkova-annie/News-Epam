@@ -6,6 +6,7 @@ import actions from '../../actions'
 import SearchList from '../SearchList'
 import SearchSort from '../SearchSort'
 import SearchInput from '../SearchInput'
+import Footer from '../Footer'
 import './style.css'
 
 class Search extends Component {
@@ -30,11 +31,12 @@ class Search extends Component {
       </Link>
       <h1 className='header'>{`You are looking for "${this.props.match.params.query}"`}</h1>
       <div className='header-inputs'>
-        <SearchSort {...this.props} />
         <SearchInput {...this.props} />
+        <SearchSort {...this.props} />
       </div>
       {this.props.search.data.length > 0 && <SearchList {...this.props} />}
-      {this.props.search.requested && this.props.search.data.length <= 0 && <p>{`Oops... we didn't find "${this.props.match.params.query}"`}</p>}
+      {this.props.search.requested && this.props.search.data.length <= 0 && <p className='text-error'>{`Oops... we didn't find "${this.props.match.params.query}"`}</p>}
+      <Footer />
     </div>
   }
 }
