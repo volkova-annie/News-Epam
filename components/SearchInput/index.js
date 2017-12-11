@@ -2,10 +2,12 @@ import React from 'react'
 import './style.css'
 
 const SearchInput = props =>
-  <form onSubmit={props.actions.searchNews.bind(null, props.history)}>
+  <form
+    className='form-search'
+    onSubmit={props.actions.searchNews.bind(null, props.history)}>
     <label
-      htmlFor='input-search'
-      className=''> Search news:
+      htmlFor='input-search'>
+      Search news:
     </label>
     <input
       id='input-search'

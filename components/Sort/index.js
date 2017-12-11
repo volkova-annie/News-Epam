@@ -2,7 +2,7 @@ import React from 'react'
 import './style.css'
 
 const Sort = props => {
-  return <form className='sort'>
+  return <form className='form-sort'>
     <label htmlFor='select-input' >Sort by: </label>
     <select
       id='select-input'
