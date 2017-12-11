@@ -1,5 +1,5 @@
 import React from 'react'
-import {getDate} from '../modules/date.js'
+import {getDate} from '../../modules/date.js'
 import './style.css'
 
 
