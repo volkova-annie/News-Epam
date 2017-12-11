@@ -1,14 +1,67 @@
-.link-back {
-  text-decoration: none;
-  border: 1px solid black;
-  border-radius: 4px;
-  padding: 15px;
-  margin-top: 1rem;
+.article {
+  max-width: 1200px;
+  min-width: 240px;
+  margin: 0 auto;
+  width: 90vw;
+  height: 100vh
 }
 
-.link-back:before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-image: url(../../assets/left-arrow.png);
+.link-back {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #7b7b7b;
+  position: absolute;
+  top: 1rem;
+}
+
+.link-back:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.article__image-wrapper {
+  min-width: 210px;
+  width: 210px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: auto;
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+.article__image {
+  display: flex;
+  max-width: 100%;
+}
+
+.article__body {
+  display: flex;
+}
+
+.article__text {
+  margin-top: 0;
+}
+
+.article__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .article__body, .article__footer {
+    flex-direction: column;
+  }
+
+  .article__image-wrapper {
+    margin: auto;
+  }
+
+  .article__description {
+    margin-top: 1rem;
+  }
+
+
 }
