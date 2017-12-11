@@ -4,7 +4,15 @@ import {Link, withRouter} from 'react-router-dom'
 import {bindActionCreators} from 'redux'
 import slug from 'slug'
 import actions from '../../actions'
+import {getDate} from '../../modules/date.js'
+import Footer from '../Footer'
 import './style.css';
+
+function findImage (multimedia) {
+  const image = multimedia.find((el) =>
+    (el.format &&  el.format === 'mediumThreeByTwo210'))
+  return image ? image.url : '/assets/no-photo.png'
+}
 
 class Post extends Component {
   componentDidMount () {
@@ -19,24 +27,39 @@ class Post extends Component {
 
     if (article) {
       return <div>
-        <Link
-          className='link-back'
-          to='/'>
-          To home page
-        </Link>
+        <div className='article'>
+          <Link
+            className='link-back'
+            to='/'>
+            To home page
+          </Link>
 
-        <h2>{article.title}</h2>
-        <p>{article.abstract}</p>
-        <p>{article.section}</p>
-        <p>{article.published_date}</p>
-        <p>{article.byline}</p>
-        <p>{article.geo_facet[0]}</p>
+          <h1 className='header'>{article.title}</h1>
+          <div className='article__body'>
+            <a
+              href={article.url}
+              target='_blank'
+              className='article__image-wrapper'>
+              <img className='article__image' src={findImage(article.multimedia)} />
+            </a>
+            <div className='article__description'>
+              <p className='article__text'><b>Section: {article.section}, {article.subsection}, {article.geo_facet[0]}</b></p>
+              <p className='article__text'>{article.abstract}</p>
+            </div>
+          </div>
+          <div className='article__footer'>
+            <p>{article.byline}</p>
+            <p className='date'>Published: {getDate(article.published_date)}</p>
+          </div>
+        </div>
+        <Footer />
       </div>
     }
     else {
       return <div>
-        <Link to='/'>To homepage</Link>
+        <Link to='/'>To home page</Link>
         Loading...
+        <Footer />
       </div>
     }
   }
