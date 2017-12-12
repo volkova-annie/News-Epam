@@ -23,26 +23,25 @@ class Search extends Component {
   }
 
   render () {
-    console.log(this.props);
     if (this.props.search.requested) {
       return <div>
-      <div className='app'>
-      <Link
-      className='link-back'
-      to='/'>
-      To home page
-      </Link>
-      <h1 className='header'>{`You are looking for "${this.props.match.params.query}"`}</h1>
-      <div className='header-inputs'>
-      <SearchInput {...this.props} />
-      <SearchSort {...this.props} />
-      </div>
-      {this.props.search.data.length > 0 && <SearchList {...this.props} />}
-      {this.props.search.requested && this.props.search.data.length <= 0 &&
-        <p className='text-error'>{`Oops... we didn't find "${this.props.match.params.query}"`}</p>}
+        <div className='app'>
+          <Link
+            className='link-back'
+            to='/'>
+          To home page
+          </Link>
+          <h1 className='header'>{`You are looking for "${this.props.match.params.query}"`}</h1>
+          <div className='header-inputs'>
+            <SearchInput {...this.props} />
+            <SearchSort {...this.props} />
+          </div>
+          {this.props.search.data.length > 0 && <SearchList {...this.props} />}
+          {this.props.search.requested && this.props.search.data.length <= 0 &&
+          <p className='text-error'>{`Oops... we didn't find "${this.props.match.params.query}"`}</p>}
         </div>
         <Footer />
-        </div>
+      </div>
     }
     else {
       return <div className='loading'>
