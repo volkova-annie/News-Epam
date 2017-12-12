@@ -16,7 +16,7 @@ const Item = props => {
   return <li className='post-item'>
     <Link to={`/post/${id}`}  className='post-item__link'>
       <div className='image-wrapper'>
-        <img src={findImage(props.multimedia)} />
+        <img src={findImage(props.multimedia)} alt='image from news' />
       </div>
       <span className='title'>{props.title}</span>
       <span className='date'>{getDate(props.published_date)}</span>
@@ -26,13 +26,14 @@ const Item = props => {
 
 const NewsList = props => {
   if (props) {
+
     return <ul className='news-list'>
-    {props.news.map(item =>
-      <Item
-      key={item.url}
-      actions={props.actions}
-      {...item} />
-    )}
+      {props.news.map(item =>
+        <Item
+          key={item.url}
+          actions={props.actions}
+          {...item} />
+      )}
     </ul>
   }
   else {

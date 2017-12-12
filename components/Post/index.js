@@ -40,7 +40,10 @@ class Post extends Component {
               href={article.url}
               target='_blank'
               className='article__image-wrapper'>
-              <img className='article__image' src={findImage(article.multimedia)} />
+              <img
+                className='article__image'
+                src={findImage(article.multimedia)}
+                alt='image from news' />
             </a>
             <div className='article__description'>
               <p className='article__text'><b>Section: {article.section}, {article.subsection}, {article.geo_facet[0]}</b></p>
