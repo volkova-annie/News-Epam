@@ -68,11 +68,23 @@
     margin-right: 0;
   }
 }
+
 @media (min-width: 768px) and (max-width: 1200px) {
   .news-list {
     justify-content: center;
   }
 
+  .post-item {
+    width: 267px;
+  }
+
+  .image-wrapper {
+    width: 267px;
+    height: 267px;
+  }
+}
+
+@media (min-width: 1200px) {
   .post-item {
     width: 267px;
   }
