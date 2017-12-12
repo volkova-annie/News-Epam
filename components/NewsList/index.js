@@ -25,13 +25,20 @@ const Item = props => {
 }
 
 const NewsList = props => {
-  return <ul className='news-list'>
+  if (props) {
+    return <ul className='news-list'>
     {props.news.map(item =>
       <Item
-        key={item.url}
-        actions={props.actions}
-        {...item} />
+      key={item.url}
+      actions={props.actions}
+      {...item} />
     )}
-  </ul>
+    </ul>
+  }
+  else {
+    return <div className='news-list__loading'>
+      <span className='loading-text'>Loading...</span>
+    </div>
+  }
 }
 export default NewsList

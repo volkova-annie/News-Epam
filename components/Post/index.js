@@ -56,10 +56,16 @@ class Post extends Component {
       </div>
     }
     else {
-      return <div>
-        <Link to='/'>To home page</Link>
-        Loading...
-        <Footer />
+      return <div className='loading'>
+        <Link
+          className='link-back'
+          to='/'>
+          To home page
+        </Link>
+        <span className='loading-text'>Loading...</span>
+        <div className='footer-wrapper'>
+          <Footer />
+        </div>
       </div>
     }
   }
