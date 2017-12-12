@@ -3,9 +3,16 @@
   list-style: none;
   margin-top: 2rem;
   padding-left: 0;
+  padding-bottom: 3rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.news-list__loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
 .post-item {

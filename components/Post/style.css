@@ -1,9 +1,11 @@
 .article {
   max-width: 1200px;
   min-width: 240px;
+  min-height: calc(100vh - 80px);
   margin: 0 auto;
-  width: 90vw;
-  height: 100vh
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .link-back {
@@ -12,11 +14,11 @@
   color: #7b7b7b;
   position: absolute;
   top: 1rem;
+  transition: all 0.3s;
 }
 
 .link-back:hover {
   color: #000;
-  text-decoration: underline;
 }
 
 .article__image-wrapper {
@@ -62,6 +64,10 @@
   .article__description {
     margin-top: 1rem;
   }
+}
 
-
+@media (max-width: 1200px) {
+  .article {
+    width: 90%;
+  }
 }
