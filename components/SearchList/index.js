@@ -19,7 +19,7 @@ const Item = props => {
         <img src={findImage(props.multimedia)} alt='image from news' />
       </div>
       <span className='title'>{props.title}</span>
-      <span className='date'>{getDate(props.pub_date)}</span>
+      <span className='date'>{getDate(props.published)}</span>
     </a>
   </li>
 }
