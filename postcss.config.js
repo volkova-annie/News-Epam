@@ -2,6 +2,8 @@ module.exports = {
   plugins: {
     'postcss-cssnext': {},
     'autoprefixer': {},
-    'cssnano': {}
+    'cssnano': {
+      autoprefixer: false
+    }
   }
 }
