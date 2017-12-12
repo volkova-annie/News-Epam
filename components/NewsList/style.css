@@ -6,7 +6,6 @@
   padding-bottom: 3rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .news-list__loading {
@@ -16,7 +15,7 @@
 }
 
 .post-item {
-  width: 240px;
+  width: 267px;
   margin-left: 1rem;
   margin-top: 1rem;
   margin-right: 1rem;
@@ -38,8 +37,8 @@
 }
 
 .image-wrapper {
-  width: 240px;
-  height: 240px;
+  width: 267px;
+  height: 267px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,4 +50,10 @@
   object-fit: cover;
   max-width: 100%;
   min-height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .news-list {
+    justify-content: center;
+  }
 }
