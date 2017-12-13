@@ -21,7 +21,7 @@ export function requestSearch(query) {
           if (!equal(search.data, response.response.docs)){
             const search = response.response.docs.map((el) => {
               const date = el.pub_date ? el.pub_date.slice(0, el.pub_date.length - 5) : null
-              el.published = new Date(date)
+              el.published = date ? new Date(date) : null
               el.title = el.headline.main
               return el
             })
